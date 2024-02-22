@@ -1,16 +1,20 @@
-import React from "react";
-import Footer from "./Footer";
-import Navigation from "./Navbar";
+// PageOne.js
+import React from 'react';
+import Navigation from './Navbar';
+import Footer from './Footer';
+import '../styles/pageOne.css'; // Import the CSS file for PageOne styles
 
 function PageOne() {
   return (
-    <div>
+    <div className="page-container">
       <Navigation />
-      <h1>The 1996 Stanley Cup</h1>
-      <div>
-        <Footer />
+      <div className="content">
+        <h1>The 1996 Stanley Cup</h1>
+        {/* Your page content goes here */}
       </div>
+      <Footer />
     </div>
   );
 }
+
 export default PageOne;

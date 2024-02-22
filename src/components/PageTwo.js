@@ -1,14 +1,15 @@
 import React from "react";
 import Footer from "./Footer";
 import Navigation from "./Navbar";
+import "../styles/pageTwo.css";
 function PageTwo() {
   return (
-    <div>
+    <div className="page-container">
       <Navigation />
-      <h1>The 2001 Stanley Cup</h1>
-      <div>
-        <Footer />
+      <div className="content">
+        <h1>The 2001 Stanley Cup</h1>
       </div>
+      <Footer />
     </div>
   );
 }

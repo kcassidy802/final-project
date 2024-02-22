@@ -1,17 +1,18 @@
 import Carousel from "react-bootstrap/Carousel";
 
 function CupPictures() {
+    //TODO:Adjust style for pictures later
   const imageStyles1 = {
-    width: "300px", // Set your desired width
-    height: "200px", // Set your desired height
+    width: "300px", 
+    height: "200px", 
   };
   const imageStyles2 = {
-    width: "500px", // Set your desired width
-    height: "500px", // Set your desired height
+    width: "500px", 
+    height: "500px", 
   };
   const imageStyles3 = {
-    width: "400px", // Set your desired width
-    height: "300px", // Set your desired height
+    width: "400px", 
+    height: "300px", 
   };
   return (
     <Carousel>

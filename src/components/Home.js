@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -38,7 +37,7 @@ function Home() {
         <div>
           <CupPictures />
         </div>
-      </div>{" "}
+      </div>
       <Footer />
     </>
   );

@@ -16,19 +16,16 @@ function Navigation() {
             <Nav className="me-auto">
               <Nav.Link href="https://www.nhl.com/avalanche/"></Nav.Link>
               <Nav.Link href="https://www.nhl.com/avalanche/">
-                {" "}
-                Colorado Avalanche{" "}
+                Colorado Avalanche
               </Nav.Link>
               <NavDropdown title="Colorado Avalanche" id="basic-nav-dropdown">
                 <NavDropdown.Item href="https://en.wikipedia.org/wiki/1996_Stanley_Cup_Finals">
-                  {" "}
-                  1996 NHL Champions{" "}
+                  1996 NHL Champions
                 </NavDropdown.Item>
                 <NavDropdown.Item href="https://en.wikipedia.org/wiki/2001_Stanley_Cup_Finals">
                   2001 NHL Champions
                 </NavDropdown.Item>
                 <NavDropdown.Item href="https://en.wikipedia.org/wiki/2022_Stanley_Cup_Finals">
-                  {" "}
                   2022 NHL Champions
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
