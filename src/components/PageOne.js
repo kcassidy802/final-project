@@ -6,7 +6,7 @@ function PageOne() {
   return (
     <div>
       <Navigation />
-      <h1>Page One</h1>
+      <h1>The 1996 Stanley Cup</h1>
       <div>
         <Footer />
       </div>

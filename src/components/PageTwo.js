@@ -5,7 +5,7 @@ function PageTwo() {
   return (
     <div>
       <Navigation />
-      <h1>Page Two</h1>
+      <h1>The 2001 Stanley Cup</h1>
       <div>
         <Footer />
       </div>

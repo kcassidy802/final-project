@@ -5,7 +5,7 @@ function PageThree() {
   return (
     <div>
       <Navigation />
-      <h1>Page Three</h1>
+      <h1>The 2021 Stanley Cup</h1>
       <div>
         <Footer />
       </div>
