@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/1996-Stanley-Cup" element={<PageOne />} />
           <Route path="/2001-Stanley-Cup" element={<PageTwo />} />
-          <Route path="/2021-Stanley-Cup" element={<PageThree />} />
+          <Route path="/2022-Stanley-Cup" element={<PageThree />} />
         </Routes>
       </Router>
     </div>

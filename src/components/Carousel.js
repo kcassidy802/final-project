@@ -30,7 +30,7 @@ function CupPictures() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          src=""
+          src="https://media.gettyimages.com/id/81372875/photo/stanley-cup-finals-colorado-avalanches-rob-blake-adam-foote-ray-bourque-and-goalie-patrick-roy.jpg?s=612x612&w=gi&k=20&c=3-UATRsHvvzbNNmtJKDkaYUAwYIL90VJCGNwHloqX00="
           styles={imageStyles2}
           text="Second Championship"
           alt="pic 2"
@@ -42,14 +42,14 @@ function CupPictures() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkqGzmRbzp8WdrZzBrPkbzglqD4iGSFcI_8Q&usqp=CAU"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCF2EsG3H4qsj-2oRGJG9Q_v0jYDfPjLxAgQ&usqp=CAU"
           styles={imageStyles3}
           text="Third Championship"
           alt="pic 3"
         />
         <Carousel.Caption>
           <h3>3rd Championship</h3>
-          <p>2021 NHL Champions</p>
+          <p>2022 NHL Champions</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

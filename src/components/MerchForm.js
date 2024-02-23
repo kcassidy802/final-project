@@ -1,38 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import { Form, Button, ListGroup, Container, Row, Col } from 'react-bootstrap';
+import React, { useState, useEffect } from "react";
+import { Form, Button, ListGroup, Container, Row, Col } from "react-bootstrap";
 
 const MerchForm = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
+    name: "",
+    email: "",
   });
 
-  // Initialize contacts state with an empty array
   const [contacts, setContacts] = useState([]);
+  const [selectedContact, setSelectedContact] = useState(null);
 
   useEffect(() => {
-    // Fetch data from the mock API when the component mounts
-    fetch('https://65b8594446324d531d561e91.mockapi.io/PromineoTechAPI/contacts')
-      .then(response => response.json())
-      .then(data => setContacts(data))
-      .catch(error => console.error('Error fetching data:', error));
+    fetch(
+      "https://65b8594446324d531d561e91.mockapi.io/PromineoTechAPI/contacts"
+    )
+      .then((response) => response.json())
+      .then((data) => setContacts(data))
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleOwnDataSubmit = (e) => {
     e.preventDefault();
 
-    // Append your own data to a new array and update the state
-    const newContact = { ...formData };
-    setContacts(prevContacts => [...prevContacts, newContact]);
+    if (selectedContact) {
+      const updatedContacts = contacts.map((contact) =>
+        contact.id === selectedContact.id ? formData : contact
+      );
+      setContacts(updatedContacts);
+      setSelectedContact(null);
+    } else {
+      const newContact = { ...formData, id: new Date().getTime().toString() };
+      setContacts((prevContacts) => [...prevContacts, newContact]);
+    }
 
-    // Clear the form after submission
-    setFormData({ firstName: '', lastName: '', email: '' });
+    setFormData({ name: "", email: "" });
+  };
+
+  const handleEdit = (contact) => {
+    setFormData({ name: contact.name, email: contact.email });
+    setSelectedContact(contact);
+  };
+
+  const handleDelete = (contact) => {
+    const updatedContacts = contacts.filter((c) => c.id !== contact.id);
+    setContacts(updatedContacts);
   };
 
   return (
@@ -41,21 +57,11 @@ const MerchForm = () => {
         <Col md={6}>
           <Form onSubmit={handleOwnDataSubmit}>
             <Form.Group controlId="formOwnFirstName">
-              <Form.Label>Your First Name:</Form.Label>
+              <Form.Label>Your Name:</Form.Label>
               <Form.Control
                 type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-              />
-            </Form.Group>
-
-            <Form.Group controlId="formOwnLastName">
-              <Form.Label>Your Last Name:</Form.Label>
-              <Form.Control
-                type="text"
-                name="lastName"
-                value={formData.lastName}
+                name="name"
+                value={formData.name}
                 onChange={handleInputChange}
               />
             </Form.Group>
@@ -71,7 +77,7 @@ const MerchForm = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit">
-              Add My Data
+              {selectedContact ? "Update Contact" : "Submit your Info"}
             </Button>
           </Form>
         </Col>
@@ -85,7 +91,23 @@ const MerchForm = () => {
           <ListGroup>
             {contacts.map((contact, index) => (
               <ListGroup.Item key={index}>
-                {contact.firstName} {contact.lastName} - {contact.email}
+                {contact.name} - {contact.email}
+                <Button
+                  variant="outline-warning"
+                  size="sm"
+                  className="ml-2"
+                  onClick={() => handleEdit(contact)}
+                >
+                  Edit
+                </Button>
+                <Button
+                  variant="outline-danger"
+                  size="sm"
+                  className="ml-2"
+                  onClick={() => handleDelete(contact)}
+                >
+                  Delete
+                </Button>
               </ListGroup.Item>
             ))}
           </ListGroup>

@@ -10,7 +10,7 @@ function PageThree() {
     <div className="page-container">
       <Navigation />
       <div className="content">
-        <h1>The 2021 Stanley Cup</h1>
+        <h1>The 2022 Stanley Cup</h1>
         <MyImage />
         <MyTable />
       </div>

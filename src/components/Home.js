@@ -19,10 +19,21 @@ function Home() {
         <Link to="/2001-Stanley-Cup">
           <Button> 2001 Stanley Cup </Button>
         </Link>
-        <Link to="/2021-Stanley-Cup">
-          <Button> 2021 Stanley Cup </Button>
+        <Link to="/2022-Stanley-Cup">
+          <Button> 2022 Stanley Cup </Button>
         </Link>
         <div>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img
+              variant="top"
+              src="https://m.media-amazon.com/images/I/61-1Br6ip+L._AC_UF894,1000_QL80_.jpg"
+            />
+            <Card.Body>
+              <Card.Title> Colorado Avalanche</Card.Title>
+              <Card.Text> Best Expansion Team to ever play </Card.Text>
+              <Button variant="primary">Click Me</Button>
+            </Card.Body>
+          </Card>
           <Card style={{ width: "18rem" }}>
             <Card.Img
               variant="top"
