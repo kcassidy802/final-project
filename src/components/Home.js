@@ -6,12 +6,13 @@ import Card from "react-bootstrap/Card";
 import Footer from "./Footer";
 import Navigation from "./Navbar";
 import CupPictures from "./Carousel";
+import MerchForm from "./MerchForm";
 function Home() {
   return (
     <>
       <div>
         <Navigation />
-        <h1> Home </h1>
+        <h1> The Colorado Avalanche Stanley Cup Championships </h1>
         <Link to="/1996-Stanley-Cup">
           <Button> 1996 Stanley Cup </Button>
         </Link>
@@ -34,8 +35,12 @@ function Home() {
             </Card.Body>
           </Card>
         </div>
+        
         <div>
           <CupPictures />
+        </div>
+        <div>
+            <MerchForm/>
         </div>
       </div>
       <Footer />

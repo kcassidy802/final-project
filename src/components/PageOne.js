@@ -1,8 +1,10 @@
-// PageOne.js
-import React from 'react';
-import Navigation from './Navbar';
-import Footer from './Footer';
-import '../styles/pageOne.css'; // Import the CSS file for PageOne styles
+import React from "react";
+import Navigation from "./Navbar";
+import Footer from "./Footer";
+import "../styles/pageOne.css";
+import MyImage from "./Image";
+import MyTable from "./Tables";
+
 
 function PageOne() {
   return (
@@ -10,7 +12,10 @@ function PageOne() {
       <Navigation />
       <div className="content">
         <h1>The 1996 Stanley Cup</h1>
-        {/* Your page content goes here */}
+        <MyImage/>
+        <MyTable/>
+       
+        
       </div>
       <Footer />
     </div>

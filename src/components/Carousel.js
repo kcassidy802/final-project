@@ -1,18 +1,18 @@
 import Carousel from "react-bootstrap/Carousel";
 
 function CupPictures() {
-    //TODO:Adjust style for pictures later
+  //TODO:Adjust style for pictures later
   const imageStyles1 = {
-    width: "300px", 
-    height: "200px", 
+    width: "300px",
+    height: "200px",
   };
   const imageStyles2 = {
-    width: "500px", 
-    height: "500px", 
+    width: "500px",
+    height: "500px",
   };
   const imageStyles3 = {
-    width: "400px", 
-    height: "300px", 
+    width: "400px",
+    height: "300px",
   };
   return (
     <Carousel>
@@ -30,7 +30,7 @@ function CupPictures() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmYM_r216yJF3QOgr1Umws7st_Fn7sCTHNlg&usqp=CAU"
+          src=""
           styles={imageStyles2}
           text="Second Championship"
           alt="pic 2"
