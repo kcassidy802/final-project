@@ -77,7 +77,7 @@ const MerchForm = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit">
-              {selectedContact ? "Update Contact" : "Submit your Info"}
+              {selectedContact ? "Update Contact" : "Submit your Info for a raffle to win free Merch!!!"}
             </Button>
           </Form>
         </Col>

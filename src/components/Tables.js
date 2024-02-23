@@ -8,26 +8,25 @@ function MyTable() {
           <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>#</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
+          <td>Nathan </td>
+          <td>Mackinnon</td>
           <td></td>
         </tr>
         <tr>
           <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
+          <td>Mikko </td>
+          <td>Ranttenan</td>
           <td></td>
         </tr>
         <tr>
           <td>3</td>
-          <td>Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Cale </td>
+          <td> Makar</td>
         </tr>
       </tbody>
     </Table>

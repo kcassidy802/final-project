@@ -7,55 +7,75 @@ import Footer from "./Footer";
 import Navigation from "./Navbar";
 import CupPictures from "./Carousel";
 import MerchForm from "./MerchForm";
+
 function Home() {
   return (
     <>
-      <div>
+      <div className="text-center" style={{ backgroundColor: "#f8f9fa", padding: "20px" }}>
         <Navigation />
-        <h1> The Colorado Avalanche Stanley Cup Championships </h1>
+        <h1 style={{ color: "#0056b3" }}>The Colorado Avalanche Stanley Cup Championships</h1>
         <Link to="/1996-Stanley-Cup">
-          <Button> 1996 Stanley Cup </Button>
+          <Button variant="primary">1996 Stanley Cup</Button>
         </Link>
         <Link to="/2001-Stanley-Cup">
-          <Button> 2001 Stanley Cup </Button>
+          <Button variant="primary">2001 Stanley Cup</Button>
         </Link>
         <Link to="/2022-Stanley-Cup">
-          <Button> 2022 Stanley Cup </Button>
+          <Button variant="primary">2022 Stanley Cup</Button>
         </Link>
-        <div>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://m.media-amazon.com/images/I/61-1Br6ip+L._AC_UF894,1000_QL80_.jpg"
-            />
-            <Card.Body>
-              <Card.Title> Colorado Avalanche</Card.Title>
-              <Card.Text> Best Expansion Team to ever play </Card.Text>
-              <Button variant="primary">Click Me</Button>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src="https://m.media-amazon.com/images/I/61-1Br6ip+L._AC_UF894,1000_QL80_.jpg"
-            />
-            <Card.Body>
-              <Card.Title> Colorado Avalanche</Card.Title>
-              <Card.Text> Best Expansion Team to ever play </Card.Text>
-              <Button variant="primary">Click Me</Button>
-            </Card.Body>
-          </Card>
-        </div>
-        
+
+        <div className="d-flex justify-content-center">
+  <Card style={{ width: "18rem", margin: "15px" }}>
+    <Card.Img
+      variant="top"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0aPatgYHHi5AaRi65UGPAafqYA8Ry4dsXeA&usqp=CAU"
+      style={{ width: "100%", height: "200px" }}
+    />
+    <Card.Body>
+      <Card.Title>Colorado Avalanche</Card.Title>
+      <Card.Text>Ray Bourque</Card.Text>
+    </Card.Body>
+  </Card>
+
+  <Card style={{ width: "18rem", margin: "10px" }}>
+    <Card.Img
+      variant="top"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-gTmzSN9wIsIw7QO9lHZVYk71fLEheIujRg&usqp=CAU"
+      style={{ width: "100%", height: "200px" }}
+    />
+    <Card.Body>
+      <Card.Title>Colorado Avalanche</Card.Title>
+      <Card.Text>Joe Sakic</Card.Text>
+    </Card.Body>
+  </Card>
+
+  <Card style={{ width: "18rem", margin: "10px" }}>
+    <Card.Img
+      variant="top"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReXoWb8QgkYw8B8Ajzyi2BrURDshwMmEnosw&usqp=CAU"
+      style={{ width: "100%", height: "200px" }}
+    />
+    <Card.Body>
+      <Card.Title>Colorado Avalanche</Card.Title>
+      <Card.Text>Nathan Mackinnon</Card.Text>
+    </Card.Body>
+  </Card>
+</div>
+
+
         <div>
           <CupPictures />
         </div>
-        <div>
-            <MerchForm/>
+
+        <div className="text-center" style={{ marginTop: "20px" }}>
+          <div style={{ display: 'inline-block', backgroundColor: "#ffffff", padding: "20px", borderRadius: "8px" }}>
+            <MerchForm />
+          </div>
         </div>
       </div>
       <Footer />
     </>
   );
 }
+
 export default Home;

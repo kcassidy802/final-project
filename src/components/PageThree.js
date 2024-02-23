@@ -5,6 +5,8 @@ import "../styles/pageThree.css";
 import MyImage from "./Image";
 import MyTable from "./Tables";
 
+
+
 function PageThree() {
   return (
     <div className="page-container">
@@ -12,6 +14,9 @@ function PageThree() {
       <div className="content">
         <h1>The 2022 Stanley Cup</h1>
         <MyImage />
+        <div>
+          
+        </div>
         <MyTable />
       </div>
       <Footer />
