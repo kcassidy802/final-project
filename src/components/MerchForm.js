@@ -8,13 +8,12 @@ const MerchForm = () => {
     email: '',
   });
 
+  // Initialize contacts state with an empty array
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
     // Fetch data from the mock API when the component mounts
     fetch('https://65b8594446324d531d561e91.mockapi.io/PromineoTechAPI/contacts')
-    
-
       .then(response => response.json())
       .then(data => setContacts(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -22,20 +21,19 @@ const MerchForm = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
   };
 
   const handleOwnDataSubmit = (e) => {
     e.preventDefault();
 
-    // Append your own data to the contacts state
-    setContacts([...contacts, formData]);
+    // Append your own data to a new array and update the state
+    const newContact = { ...formData };
+    setContacts(prevContacts => [...prevContacts, newContact]);
 
     // Clear the form after submission
     setFormData({ firstName: '', lastName: '', email: '' });
   };
-  console.log('{contacts.firstName} ==',contacts.firstName)
-  console.log('{contacts.email} ==',contacts.email)
 
   return (
     <Container>
@@ -73,7 +71,7 @@ const MerchForm = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit">
-              Submit Your Info for Free Merch!!
+              Add My Data
             </Button>
           </Form>
         </Col>
