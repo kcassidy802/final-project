@@ -5,10 +5,10 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-function Navigation() {
+function Navigation() { //the navbar you see at the top of each page and the links where it takes you to
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary bg-dark" >
         <Container>
           <Navbar.Brand href="#home"> My Final Project </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

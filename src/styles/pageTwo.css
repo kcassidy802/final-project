@@ -1,5 +1,4 @@
-/* pageOne.css */
-html, body {
+html, body {   /* Page two css styling pretty minor*/
     height: 100%;
     margin: 0;
   }
@@ -19,7 +18,7 @@ html, body {
   
   footer {
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #27342d95;
     padding: 10px;
     position: absolute;
     bottom: 0;

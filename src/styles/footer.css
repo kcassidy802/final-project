@@ -1,5 +1,5 @@
-html,
-body {
+html,   /* css styling for the footer to remain at the bottom of the page on each page*/
+body { 
   height: 100%;
   margin: 0;
 }

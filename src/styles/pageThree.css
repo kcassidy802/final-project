@@ -1,4 +1,5 @@
-html, body {
+html, body {  /* Page three css styling pretty minor*/
+  background-color: gray;
     height: 100%;
     margin: 0;
   }

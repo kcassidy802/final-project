@@ -8,8 +8,8 @@ import Navigation from "./Navbar";
 import CupPictures from "./Carousel";
 import MerchForm from "./MerchForm";
 
-function Home() {
-  return (
+function Home() { // Our homepage where we have a navbar, some cards, cup pictures and buttons to navigate between
+  return (        // each page, we also have our footer at the bottom.
     <>
       <div className="text-center" style={{ backgroundColor: "#f8f9fa", padding: "20px" }}>
         <Navigation />

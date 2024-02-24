@@ -1,6 +1,6 @@
 import Table from 'react-bootstrap/Table';
 
-function MyTable() { //table for page three including player info
+function MyTableThree() { //table for page 2 including player data
   return (
     <Table striped bordered hover>
       <thead>
@@ -12,23 +12,23 @@ function MyTable() { //table for page three including player info
       </thead>
       <tbody>
         <tr>
-          <td>29</td>
-          <td>Nathan </td>
-          <td>Mackinnon</td>
+          <td>21</td>
+          <td>Peter</td>
+          <td>Foresberg</td>
         </tr>
         <tr>
-          <td>96</td>
-          <td>Mikko </td>
-          <td>Ranttenan</td>
+          <td>19</td>
+          <td>Joe  </td>
+          <td>Sakic</td>
         </tr>
         <tr>
-          <td>8</td>
-          <td>Cale </td>
-          <td> Makar</td>
+          <td>23 </td>
+          <td>Milan </td>
+          <td> Hedjuk </td>
         </tr>
       </tbody>
     </Table>
   );
 }
 
-export default MyTable;
+export default MyTableThree;

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, ListGroup, Container, Row, Col } from "react-bootstrap";
 
-const MerchForm = () => {
+const MerchForm = () => { // here we have our CRUD application that performs all tasks
   const [formData, setFormData] = useState({
     name: "",
     email: "",
   });
 
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState([]); //using useState 
   const [selectedContact, setSelectedContact] = useState(null);
 
   useEffect(() => {
     fetch(
-      "https://65b8594446324d531d561e91.mockapi.io/PromineoTechAPI/contacts"
+      "https://65b8594446324d531d561e91.mockapi.io/PromineoTechAPI/contacts" //my mock API and fetch method
     )
       .then((response) => response.json())
       .then((data) => setContacts(data))
@@ -24,7 +24,7 @@ const MerchForm = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
-  const handleOwnDataSubmit = (e) => {
+  const handleOwnDataSubmit = (e) => { //submitting data handle
     e.preventDefault();
 
     if (selectedContact) {
@@ -41,17 +41,17 @@ const MerchForm = () => {
     setFormData({ name: "", email: "" });
   };
 
-  const handleEdit = (contact) => {
+  const handleEdit = (contact) => { // edit contacts ability
     setFormData({ name: contact.name, email: contact.email });
     setSelectedContact(contact);
   };
 
-  const handleDelete = (contact) => {
+  const handleDelete = (contact) => { // delete contacts ability
     const updatedContacts = contacts.filter((c) => c.id !== contact.id);
     setContacts(updatedContacts);
   };
 
-  return (
+  return (  // our form below for storing our contacts
     <Container>
       <Row>
         <Col md={6}>

@@ -1,7 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 
-function CupPictures() {
-  // Set a common size for all images
+function CupPictures() { //Carousel comp on the first page and setting pictures see they are all the same size
   const commonImageStyles = {
     width: "600px",
     height: "400px",
